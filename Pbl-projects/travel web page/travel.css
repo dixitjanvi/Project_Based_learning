@@ -1,0 +1,130 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004aad;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+.navbar nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+.navbar nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+.btn {
+  padding: 10px 20px;
+  background: #ff7f50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.btn:hover {
+  background: #e5673f;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h1 {
+  font-size: 48px;
+}
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.features {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.feature img {
+  width: 60px;
+}
+.feature h3 {
+  margin: 10px 0;
+}
+
+.destinations {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+.destination-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.destination img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.destination h3 {
+  margin-top: 10px;
+}
+
+.contact {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact input, .contact textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.contact button {
+  background: #004aad;
+}
+
+.footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.footer .socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 18px;
+}

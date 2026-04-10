@@ -1,0 +1,56 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffccff;
+  text-shadow: 2px 2px 20px #ff66cc;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff00cc; }
+  to { text-shadow: 0 0 25px #ffffff; }
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 20px #fff;
+  margin-top: 20px;
+}
+
+.wish {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ff99ff;
+  animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#fireworks, #confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

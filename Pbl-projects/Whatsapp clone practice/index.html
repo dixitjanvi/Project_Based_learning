@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WhatsApp Web Clone</title>
+
+  <!-- Font Awesome Icons (Required for UI icons) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="header">
+        <div class="user-img">
+          <img src="https://i.pravatar.cc/150?img=5" alt="Me" />
+        </div>
+        <div class="nav-icons">
+          <i class="fa-solid fa-circle-notch"></i>
+          <i class="fa-solid fa-message"></i> 
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+      <div class="search-bar">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search or start a new chat" />
+        </div>
+      </div>
+
+      <div class="contact-list" id="contact-list"></div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area">
+
+      <!-- Default Placeholder Before Selecting -->
+      <div id="chat-placeholder" class="chat-placeholder">
+        <i class="fa-brands fa-whatsapp"></i>
+        <h1>WhatsApp for Windows</h1>
+        <p>Send and receive messages without keeping your phone online.</p>
+        <div class="encryption">
+          <i class="fa-solid fa-lock"></i> End-to-end encrypted
+        </div>
+      </div>
+
+      <!-- Real Chat Box -->
+      <div id="chat-interface" class="chat-interface" style="display:none;">
+
+        <div class="chat-header">
+          <div class="img-text">
+            <img id="active-img" src="" alt="Contact" />
+            <div class="details">
+              <h4 id="active-name">Name</h4>
+              <p>Online</p>
+            </div>
+          </div>
+          <div class="header-icons">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-phone"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+        </div>
+
+        <div class="messages-box" id="messages-box"></div>
+
+        <!-- ONLY ONE Chat Input -->
+        <div class="chat-input">
+          <i class="fa-regular fa-face-smile" id="emoji-btn"></i>
+          <i class="fa-solid fa-paperclip"></i>
+          <input type="text" id="msg-input" placeholder="Type a message" />
+          <i class="fa-solid fa-paper-plane" id="send-btn"></i>
+
+          <!-- Emoji Picker -->
+          <div class="emoji-picker" id="emoji-picker">
+            <span>😂</span><span>❤️</span><span>🤣</span><span>👍</span>
+            <span>😍</span><span>🙏</span><span>😒</span><span>🥰</span>
+            <span>😠</span><span>🔥</span><span>💅</span><span>👗</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

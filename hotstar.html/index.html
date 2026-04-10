@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" async></script>
+
+    <title> Disney+ Hotstar Clone </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="./Images/logo (1).png" alt="Official logo of Disney+" class="disneyLogo">
+        <ul class="nav-links">
+            <li class="nav-items"><a href="#">TV</a></li>
+            <li class="nav-items"><a href="#">Movies</a></li>
+            <li class="nav-items"><a href="#">Sports</a></li>
+            <li class="nav-items"><a href="#">Premium</a></li>
+        </ul>
+        <div class="right-container">
+            <input type="search" class="search-box" placeholder="Search">
+            <button class="sub-btn">Subscribe</button>
+            <a href="login.html" class="Login-link">Login</a>
+        </div>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <!-- <div class="slider">
+                    <div class="slide-content">
+                        <h1 class="movie-title">Loki</h1>
+                        <p class="movie-des">The first season of the American television series Loki, based on Marvel Comics featuring the character of the same name, sees Loki brought to the mysterious Time Variance Authority (TVA) after stealing the Tesseract during the events of Avengers: Endgame (2019), and is forced to help catch a dangerous variant version ...</p>
+                     </div>
+                     <img src="./Images/slider 1.PNG" alt="Loki Slider Image">
+                </div>
+                <div class="slider">
+                    <div class="slide-content">
+                        <h1 class="movie-title">Falcon And The Winter Soldier</h1>
+                        <p class="movie-des">It is the second television series in the Marvel Cinematic Universe (MCU) produced by Marvel Studios, sharing continuity with the films of the franchise, and is set six months after Sam Wilson was handed the mantle of Captain America in the film Avengers: Endgame (2019).</p>
+                     </div>
+                     <img src="./Images/slider 2.PNG" alt="Loki Slider Image">
+                </div>
+                <div class="slider">
+                    <div class="slide-content">
+                        <h1 class="movie-title">WandaVision</h1>
+                        <p class="movie-des">WandaVision is an American television miniseries created by Jac Schaeffer for the streaming service Disney+, based on Marvel Comics featuring the characters Wanda Maximoff / Scarlet Witch and Vision.</p>
+                     </div>
+                     <img src="./Images/slider 3.PNG" alt="Loki Slider Image">
+                </div>
+                <div class="slider">
+                    <div class="slide-content">
+                        <h1 class="movie-title">Raya and the Last Dragon</h1>
+                        <p class="movie-des">Raya and the Last Dragon is a 2021 American computer-animated fantasy action-adventure film produced by Walt Disney Animation Studios and distributed by Walt Disney Studios Motion Pictures.</p>
+                     </div>
+                     <img src="./Images/slider 4.PNG" alt="Loki Slider Image">
+                </div>
+                <div class="slider">
+                    <div class="slide-content">
+                        <h1 class="movie-title">Luca</h1>
+                        <p class="movie-des">Set on the Italian Riviera, the film centers on Luca Paguro (Tremblay), a young sea monster boy with the ability to assume human form while on land, who explores the town of Portorosso with his new best friends, Alberto Scorfano (Grazer) and Giulia Marcovaldo (Berman), experiencing a life-changing summer adventure.</p>
+                     </div>
+                     <img src="./Images/slider 5.PNG" alt="Loki Slider Image">
+                </div> -->
+        </div>
+    </div>
+
+    <div class="video-card-container">
+        <div class="video-card">
+            <img src="./Images/disney.PNG" alt="Disney Logo" class="video-card-image">
+            <video src="./Videos/disney.mp4" muted loop class="video-card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="./Images/pixar.PNG" alt="Pixar Logo" class="video-card-image">
+            <video src="./Videos/pixar.mp4" muted loop class="video-card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="./Images/marvel.PNG" alt="Marvel Logo" class="video-card-image">
+            <video src="./Videos/marvel.mp4" muted loop class="video-card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="./Images/star-wars.PNG" alt="Star-Wars Logo" class="video-card-image">
+            <video src="./Videos/star-war.mp4" muted loop class="video-card-video"></video>
+        </div>
+        <div class="video-card">
+            <img src="./Images/geographic.PNG" alt="Geographic Logo" class="video-card-image">
+            <video src="./Videos/geographic.mp4" muted loop class="video-card-video"></video>
+        </div>
+    </div>
+    <h1 class="title"> Recommended For You </h1>
+    <div class=movies-list>
+        <button class="pre-btn" title="btn">
+            <img src="./Images/pre.png" alt="Pre Button">
+        </button>
+        <button class="nxt-btn" title="btn">
+            <img src="./Images/nxt.png" alt="Next Button">
+        </button>
+        <div class="card-container">
+            <div class="card">
+                <img src="./Images/poster 1.png" class="card-img" alt="Poster1" />
+                <div class="card-body">
+                    <h2 class="name">Loki</h2>
+                    <h6 class="des">Loki is an American television series ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 2.png" class="card-img" alt="Poster2" />
+                <div class="card-body">
+                    <h2 class="name">Mulan</h2>
+                    <h6 class="des">Mulan is a 2020 American fantasy action...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 3.png" class="card-img" alt="Poster3" />
+                <div class="card-body">
+                    <h2 class="name">Falcon And The Winter Soldier</h2>
+                    <h6 class="des">The Falcon and the Winter Soldier is...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 4.png" class="card-img" alt="Poster4" />
+                <div class="card-body">
+                    <h2 class="name">Avengers End Game</h2>
+                    <h6 class="des">Avengers: Endgame is a 2019 American...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 5.png" class="card-img" alt="Poster5" />
+                <div class="card-body">
+                    <h2 class="name">Thor Ragnarok</h2>
+                    <h6 class="des">Thor: Ragnarok is a 2017 American superhero...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 6.png" class="card-img" alt="Poster6" />
+                <div class="card-body">
+                    <h2 class="name">Marvel's Avenger</h2>
+                    <h6 class="des">Marvel's The Avengers or simply The Avengers,..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 7.png" class="card-img" alt="Poster7" />
+                <div class="card-body">
+                    <h2 class="name">Pirates Of The Caribbean- Salazar's Revenge</h2>
+                    <h6 class="des">Javier Bardem as Captain Armando Salazar:...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 8.png" class="card-img" alt="Poster8" />
+                <div class="card-body">
+                    <h2 class="name">Soul</h2>
+                    <h6 class="des">Soul is a 2020 American computer-animated ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 9.png" class="card-img" alt="Poster9" />
+                <div class="card-body">
+                    <h2 class="name">Raya</h2>
+                    <h6 class="des">2021 American animated fantasy action-adventure ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 10.png" class="card-img" alt="Poster10" />
+                <div class="card-body">
+                    <h2 class="name">Luca</h2>
+                    <h6 class="des">2021 American animated coming-of-age ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 11.png" class="card-img" alt="Poster11" />
+                <div class="card-body">
+                    <h2 class="name">Ford vs Ferrari</h2>
+                    <h6 class="des">2019 American biographical sports drama..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 12.png" class="card-img" alt="Poster12" />
+                <div class="card-body">
+                    <h2 class="name">Dark Phoenix</h2>
+                    <h6 class="des"> is a 2019 American superhero ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="title"> Popular Shows For You </h1>
+    <div class=movies-list>
+        <button class="pre-btn" title="btn">
+            <img src="./Images/pre.png" alt="Pre Button">
+        </button>
+        <button class="nxt-btn" title="btn">
+            <img src="./Images/nxt.png" alt="Next Button">
+        </button>
+        <div class="card-container">
+            <div class="card">
+                <img src="./Images/poster 12.png" class="card-img" alt="Poster1" />
+                <div class="card-body">
+                    <h2 class="name">Dark Phoenix</h2>
+                    <h6 class="des">Dark Phoenix tells the origin story ...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 11.png" class="card-img" alt="Poster2" />
+                <div class="card-body">
+                    <h2 class="name">Ford vs Ferrari</h2>
+                    <h6 class="des">Ford v Ferrari is a 2019 American... </h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 10.png" class="card-img" alt="Poster3" />
+                <div class="card-body">
+                    <h2 class="name">Luca</h2>
+                    <h6 class="des">Luca is a 2021 American computer-animated..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 9.png" class="card-img" alt="Poster4" />
+                <div class="card-body">
+                    <h2 class="name">Raya and the last Dragon</h2>
+                    <h6 class="des">Raya and the Last Dragon is a 2021 American...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 8.png" class="card-img" alt="Poster5" />
+                <div class="card-body">
+                    <h2 class="name">Soul</h2>
+                    <h6 class="des">Soul is a 2020 American computer-animated ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 7.png" class="card-img" alt="Poster6" />
+                <div class="card-body">
+                    <h2 class="name">Pirates Of The Caribbean- Salazar's Revenge</h2>
+                    <h6 class="des">Javier Bardem as Captain Armando Salazar:...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 6.png" class="card-img" alt="Poster7" />
+                <div class="card-body">
+                    <h2 class="name">Marvel's Avenger</h2>
+                    <h6 class="des">Marvel's The Avengers or simply The Avengers,...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 5.png" class="card-img" alt="Poster8" />
+                <div class="card-body">
+                    <h2 class="name">Thor Ragnarok</h2>
+                    <h6 class="des">Thor: Ragnarok is a 2017 American superhero...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 4.png" class="card-img" alt="Poster9" />
+                <div class="card-body">
+                    <h2 class="name">Avengers End Game</h2>
+                    <h6 class="des">Avengers: Endgame is a 2019 American...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 3.png" class="card-img" alt="Poster10" />
+                <div class="card-body">
+                    <h2 class="name">Falcon And The Winter Soldier</h2>
+                    <h6 class="des">The Falcon and the Winter Soldier is...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 2.png" class="card-img" alt="Poster11" />
+                <div class="card-body">
+                    <h2 class="name">Mulan</h2>
+                    <h6 class="des">Mulan is a 2020 American fantasy action...</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Images/poster 1.png" class="card-img" alt="Poster12" />
+                <div class="card-body">
+                    <h2 class="name">Loki</h2>
+                    <h6 class="des">Loki is an American television series ..</h6>
+                    <button class="watchlist-btn">Add to Watch-list</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.linkedin.com/in/janvi-gupta-4209a7329/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/janviishere"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_janvi0209_/"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:janvigupta7000@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>Copyright &copy;2025; Designed by <span class="designer">Janvi Gupta</span></p>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

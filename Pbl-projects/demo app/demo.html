@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚦 Smart Road Safety Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; background: #f0f4f8; }
+    h1 { margin-top: 20px; color: #333; }
+    
+    #speedVal {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px;
+    }
+
+    #alert {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px auto;
+      padding: 15px;
+      width: 60%;
+      border-radius: 12px;
+      transition: 0.4s;
+    }
+
+    .safe { background: #d4edda; color: #155724; }
+    .warn { background: #fff3cd; color: #856404; }
+    .danger { background: #f8d7da; color: #721c24; }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover { opacity: 0.8; }
+
+    .hazard { background: #ff9800; color: white; }
+    .sos { background: #d32f2f; color: white; }
+    .reset { background: #1976d2; color: white; }
+
+    #speedometer {
+      width: 200px;
+      height: 200px;
+      border: 12px solid #444;
+      border-radius: 50%;
+      margin: 20px auto;
+      position: relative;
+      background: #eee;
+    }
+    #needle {
+      width: 6px;
+      height: 90px;
+      background: red;
+      position: absolute;
+      top: 20px;
+      left: 97px;
+      transform-origin: bottom center;
+      transform: rotate(-90deg);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚗 Smart Road Safety System</h1>
+  
+  <div id="speedometer">
+    <div id="needle"></div>
+  </div>
+  
+  <div id="speedVal">Speed: 0 km/h</div>
+  
+  <input type="range" id="speed" min="0" max="120" value="0" oninput="checkSpeed()" style="width: 80%;">
+  
+  <div id="alert" class="safe">✅ Status: Safe Driving</div>
+  
+  <button class="btn hazard" onclick="showHazard()">⚠ Accident Zone</button>
+  <button class="btn hazard" onclick="showFog()">🌫 Fog Alert</button>
+  <button class="btn sos" onclick="sendSOS()">🆘 Send SOS</button>
+  <button class="btn reset" onclick="resetSystem()">🔄 Reset</button>
+  
+  <script>
+    function checkSpeed() {
+      let speed = document.getElementById("speed").value;
+      document.getElementById("speedVal").innerText = "Speed: " + speed + " km/h";
+      let alertBox = document.getElementById("alert");
+      let needle = document.getElementById("needle");
+
+      // Rotate needle (speedometer effect)
+      let angle = -90 + (speed * 1.5); // Maps 0–120 km/h to -90°–90°
+      needle.style.transform = "rotate(" + angle + "deg)";
+
+      if (speed < 40) {
+        alertBox.innerHTML = "✅ Status: Safe Driving";
+        alertBox.className = "safe";
+      } else if (speed < 70) {
+        alertBox.innerHTML = "⚠ Caution: Moderate Speed";
+        alertBox.className = "warn";
+      } else {
+        alertBox.innerHTML = "🚨 Danger: Overspeeding!";
+        alertBox.className = "danger";
+      }
+    }
+
+    function showHazard() {
+      let alertBox = document.getElementById("alert");
+      alertBox.innerHTML = "⚠ Hazard: Accident-Prone Zone Ahead!";
+      alertBox.className = "warn";
+    }
+
+    function showFog() {
+      let alertBox = document.getElementById("alert");
+      alertBox.innerHTML = "🌫 Fog Alert: Low Visibility, Drive Slowly!";
+      alertBox.className = "warn";
+    }
+
+    function sendSOS() {
+      let alertBox = document.getElementById("alert");
+      alertBox.innerHTML = "🆘 SOS Sent! Emergency Services Notified.";
+      alertBox.className = "danger";
+    }
+
+    function resetSystem() {
+      document.getElementById("alert").innerHTML = "✅ Status: Safe Driving";
+      document.

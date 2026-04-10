@@ -1,0 +1,51 @@
+  * {
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    color: darkslategrey;
+    font-weight: bold;
+    font-size: 80px;
+    text-align: center;
+}
+
+#board {
+    color: black;
+    margin: 40px auto;
+    width: 375px;
+    height: 375px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 120px;
+    height: 120px;
+    background-color: lightgray;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: lightblue;
+}
+
+#restartButton {
+    border: 1px solid black;
+    border-radius: 40px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: lightblue;
+}

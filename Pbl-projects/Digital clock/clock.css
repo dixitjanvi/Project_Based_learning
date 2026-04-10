@@ -1,0 +1,17 @@
+ body{
+    background: linear-gradient(45deg,pink ,#003340);
+}
+.clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-shadow: olive;
+    padding: 20px 40px;
+    border: 2px solid #003340;
+
+    transform: translate(-50%) translateY(-50%);
+    color: antiquewhite;
+    font-size: 120px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 8px;
+}

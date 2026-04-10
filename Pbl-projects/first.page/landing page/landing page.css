@@ -1,0 +1,151 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center center/cover;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.navbar p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nav-links {
+  margin-top: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+.main {
+  background: url("main.png") no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.main h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.main p {
+  font-size: 1.2rem;
+}
+
+.Home {
+  padding: 60px 20px;
+  background: url("home.png") no-repeat center center/cover;
+  text-align: center;
+  color: white;
+}
+
+.Home h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.Home p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e68900;
+}
+
+.Features {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.Features h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.Features ul {
+  list-style: none;
+}
+
+.Features ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.booking {
+  padding: 60px 20px;
+  background: url("hotel\ booking.png") no-repeat center center/cover;
+  text-align: center;
+  color: white;
+}
+
+.booking h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.sign-in {
+  padding: 60px 20px;
+  background: url("sign\ in.png") no-repeat center center/cover;
+  text-align: center;
+  color: white;
+}
+
+.sign-in h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: #e6dcdc;
+  color: white;
+  text-align: center;
+  padding:0;
+}

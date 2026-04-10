@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N8N Integration Test - ShopVista</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-button {
+            background: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .test-button:hover {
+            background: #e68900;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <h1>N8N Integration Test Page</h1>
+    <p>This page allows you to test the n8n webhook integration for your ShopVista website.</p>
+
+    <div class="test-section">
+        <h2>Test Feedback Form Submission</h2>
+        <p>Click the button below to test sending feedback data to your n8n webhook:</p>
+        <button class="test-button" onclick="testFeedbackSubmission()">Test Feedback Submission</button>
+        <div id="feedback-result" class="result" style="display: none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Sign-In Form Submission</h2>
+        <p>Click the button below to test sending sign-in data to your n8n webhook:</p>
+        <button class="test-button" onclick="testSignInSubmission()">Test Sign-In Submission</button>
+        <div id="signin-result" class="result" style="display: none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test Sign-Up Form Submission</h2>
+        <p>Click the button below to test sending sign-up data to your n8n webhook:</p>
+        <button class="test-button" onclick="testSignUpSubmission()">Test Sign-Up Submission</button>
+        <div id="signup-result" class="result" style="display: none;"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Integration Status</h2>
+        <p><strong>N8N Webhook URL:</strong> https://shivank924.app.n8n.cloud/webhook-test/a0d1a233-1613-4615-a027-9b4f7a370e1f</p>
+        <p><strong>Status:</strong> <span id="connection-status" class="info">Ready to test</span></p>
+    </div>
+
+    <script>
+        // Centralized function to submit data to n8n webhook
+        async function submitToN8n(data) {
+            const n8nWebhookUrl = 'https://shivank924.app.n8n.cloud/webhook-test/a0d1a233-1613-4615-a027-9b4f7a370e1f';
+            
+            try {
+                const response = await fetch(n8nWebhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                console.log('Data submitted successfully to n8n:', result);
+                return result;
+            } catch (error) {
+                console.error('Error submitting data to n8n:', error);
+                throw error;
+            }
+        }
+
+        function showResult(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.className = `result ${type}`;
+            element.style.display = 'block';
+        }
+
+        async function testFeedbackSubmission() {
+            const resultElement = document.getElementById('feedback-result');
+            showResult('feedback-result', 'Sending feedback data...', 'info');
+            
+            try {
+                const feedbackData = {
+                    type: 'feedback',
+                    name: 'Test User',
+                    email: 'test@example.com',
+                    subject: 'Test Feedback',
+                    message: 'This is a test feedback message to verify n8n integration.',
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    url: window.location.href
+                };
+                
+                const result = await submitToN8n(feedbackData);
+                showResult('feedback-result', 'Feedback submitted successfully! Check your n8n workflow.', 'success');
+            } catch (error) {
+                showResult('feedback-result', `Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function testSignInSubmission() {
+            const resultElement = document.getElementById('signin-result');
+            showResult('signin-result', 'Sending sign-in data...', 'info');
+            
+            try {
+                const signInData = {
+                    type: 'signin',
+                    email: 'test@example.com',
+                    password: 'testpassword123',
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    url: window.location.href
+                };
+                
+                const result = await submitToN8n(signInData);
+                showResult('signin-result', 'Sign-in data submitted successfully! Check your n8n workflow.', 'success');
+            } catch (error) {
+                showResult('signin-result', `Error: ${error.message}`, 'error');
+            }
+        }
+
+        async function testSignUpSubmission() {
+            const resultElement = document.getElementById('signup-result');
+            showResult('signup-result', 'Sending sign-up data...', 'info');
+            
+            try {
+                const signUpData = {
+                    type: 'signup',
+                    name: 'Test User',
+                    email: 'newuser@example.com',
+                    password: 'newpassword123',
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    url: window.location.href
+                };
+                
+                const result = await submitToN8n(signUpData);
+                showResult('signup-result', 'Sign-up data submitted successfully! Check your n8n workflow.', 'success');
+            } catch (error) {
+                showResult('signup-result', `Error: ${error.message}`, 'error');
+            }
+        }
+
+        // Test connection on page load
+        window.addEventListener('load', async () => {
+            try {
+                const testData = {
+                    type: 'test',
+                    message: 'Connection test',
+                    timestamp: new Date().toISOString()
+                };
+                
+                await submitToN8n(testData);
+                document.getElementById('connection-status').textContent = 'Connected successfully';
+                document.getElementById('connection-status').className = 'success';
+            } catch (error) {
+                document.getElementById('connection-status').textContent = `Connection failed: ${error.message}`;
+                document.getElementById('connection-status').className = 'error';
+            }
+        });
+    </script>
+</body>
+</html>
